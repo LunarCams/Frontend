@@ -23,7 +23,16 @@ function SensorPanel({ sensor }) {
 
       {/* Visual feed */}
       <div className="relative aspect-[4/3] w-full overflow-hidden border-b border-edge bg-space-950">
-        <ProceduralCanvas kind={sensor.visual} seed={sensor.panel.charCodeAt(0) * 7} className="h-full w-full" />
+        {sensor.img ? (
+          <img
+            src={sensor.img}
+            alt={`${sensor.name} — ${sensor.fullName}`}
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <ProceduralCanvas kind={sensor.visual} seed={sensor.panel.charCodeAt(0) * 7} className="h-full w-full" />
+        )}
         <div className="pointer-events-none absolute inset-0 grid-scanlines" />
         {/* HUD corners */}
         <div className="pointer-events-none absolute left-2 top-2 h-3 w-3 border-l border-t border-cyan-glow/60" />

@@ -22,7 +22,8 @@ export const SENSORS = [
     panel: 'A',
     name: 'OHRC',
     fullName: 'Orbital High Resolution Camera',
-    visual: 'lunar', // procedural renderer key
+    visual: 'lunar', // procedural renderer key (fallback)
+    img: '/sensors/ohrc.jpg',
     accent: '#e2e8f0',
     telemetry: [
       { k: 'Resolution / GSD', v: '0.25 m/pixel' },
@@ -37,6 +38,7 @@ export const SENSORS = [
     name: 'TMC-2',
     fullName: 'Terrain Mapping Camera',
     visual: 'topo',
+    img: '/sensors/tmc2.jpg',
     accent: '#a3b8d8',
     telemetry: [
       { k: 'Resolution / GSD', v: '5.0 m/pixel' },
@@ -51,6 +53,7 @@ export const SENSORS = [
     name: 'IIRS',
     fullName: 'Imaging Infrared Spectrometer',
     visual: 'heatmap',
+    img: '/sensors/iirs.jpg',
     accent: '#fb923c',
     telemetry: [
       { k: 'Resolution / GSD', v: '80.0 m/pixel' },
@@ -65,6 +68,7 @@ export const SENSORS = [
     name: 'FUSED',
     fullName: 'Final Processed View · Homography',
     visual: 'fused',
+    img: '/sensors/fused.jpg',
     accent: '#22d3ee',
     telemetry: [
       { k: 'Status', v: 'ALIGNED (Homography Computed)' },
